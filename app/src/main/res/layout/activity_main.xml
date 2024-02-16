@@ -41,7 +41,6 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
-            <!-- Buttons for digits 1-9 with onClick="addNumber" style="@style/DigitBtnStyle" -->
 
             <Button
                 android:id="@+id/btn1"
@@ -129,7 +128,6 @@
                 android:onClick="setOperator"
                 android:text="*" />
 
-            <!-- Add other digit buttons similarly -->
 
         </TableRow>
 
@@ -137,7 +135,6 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
-            <!-- Buttons for operators +, -, *, / with onClick="setOperator" -->
 
             <Button
                 android:id="@+id/btn0"
@@ -154,7 +151,6 @@
                 android:onClick="setOperator"
                 android:text="/" />
 
-            <!-- Add "=" button with android:layout_span="2" -->
 
         </TableRow>
 

@@ -30,7 +30,6 @@ public class MainActivity extends AppCompatActivity {
 
         screen = findViewById(R.id.screen);
 
-        // Set onClickListener for "=" button
         Button btnEgal = findViewById(R.id.btnEgal);
         btnEgal.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -39,7 +38,6 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        // Set onClickListener for digit buttons dynamically using styles
         for (int i = 1; i <= 9; i++) {
             int buttonId = getResources().getIdentifier("btn" + i, "id", getPackageName());
             Button digitButton = findViewById(buttonId);
@@ -63,7 +61,7 @@ public class MainActivity extends AppCompatActivity {
             operator = Ops.DIV;
         } else {
             Toast.makeText(this, "Opérateur non reconnu", Toast.LENGTH_LONG).show();
-            return; // do nothing if no operator
+            return;
         }
 
         isOp1 = false;
@@ -98,12 +96,11 @@ public class MainActivity extends AppCompatActivity {
                 if (op2 != 0) {
                     op1 = op1 / op2;
                 } else {
-                    // Gérer la division par zéro
                     Toast.makeText(this, "Division par zéro", Toast.LENGTH_LONG).show();
                     return;
                 }
             } else {
-                return; // do nothing if no operator
+                return;
             }
             op2 = 0;
             isOp1 = true;
